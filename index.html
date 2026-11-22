@@ -1,246 +1,100 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#f3f2ec" />
-    <title>Zhangwei Chen — Robotics, VLA, and reliable runtime systems</title>
-    <meta
-      name="description"
-      content="Zhangwei Chen studies robot simulation, embodied intelligence, and reliable runtime systems for vision-language-action policies."
-    />
-    <link rel="canonical" href="https://shiraikuroko123.github.io/" />
-    <meta property="og:title" content="Zhangwei Chen — Robotics, VLA, and reliable runtime systems" />
-    <meta
-      property="og:description"
-      content="Research notes and reproducible systems work across robot simulation, embodied intelligence, and computer vision."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://shiraikuroko123.github.io/" />
-    <meta property="og:image" content="https://shiraikuroko123.github.io/assets/armbench-teaser-poster.webp" />
-    <meta property="og:image:alt" content="A simulated Panda arm executing a tabletop task in the VLA-Sync runtime." />
-    <link rel="icon" href="assets/avatar.png" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-
+<html lang="en" id="top">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>Zhangwei Chen — Inference systems & robotics</title>
+  <meta name="description" content="Zhangwei Chen studies LLM inference scheduling, robot policy runtimes, and deployable vision systems.">
+  <link rel="canonical" href="https://shiraikuroko123.github.io/">
+  <link rel="alternate" hreflang="en" href="https://shiraikuroko123.github.io/en.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Zhangwei Chen — Inference systems & robotics">
+  <meta property="og:description" content="Researching LLM inference scheduling, robot policy runtimes, and deployable vision systems.">
+  <meta property="og:url" content="https://shiraikuroko123.github.io/">
+  <meta property="og:image" content="https://shiraikuroko123.github.io/assets/showcase/rss-sawyer-rescue-poster.webp">
+  <meta property="og:image:alt" content="Sawyer robot arm performing a rescue motion in Cartesian Replay.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site-frame">
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Zhangwei Chen home">
-        <span class="brand-mark">ZC</span>
-        <span>
-          <strong>ZHANGWEI CHEN</strong>
-          <small>机器人仿真 · 具身智能 · 计算机视觉</small>
-        </span>
-      </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-        <span>Menu</span>
-        <span class="menu-icon" aria-hidden="true">↘</span>
-      </button>
-      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
-        <a href="#work">Selected work</a>
-        <a href="#focus">Research focus</a>
-        <a href="#about">About</a>
-        <a class="nav-github" href="https://github.com/Shiraikuroko123" target="_blank" rel="noreferrer">GitHub ↗</a>
-      </nav>
+      <a class="brand" href="#top" aria-label="Back to homepage"><span class="brand-copy"><strong>Zhangwei Chen</strong><small>Inference systems · robotics</small></span></a>
+      <p class="header-specialty">Inference systems · Robotics runtime</p>
+      <nav class="site-nav" aria-label="Page navigation"><a href="#about">About</a><a href="#experience">Experience</a><a href="#awards">Awards</a><a href="#work">Projects</a><a href="#contact">Contact</a></nav>
+      <div class="header-links"><a href="https://github.com/Shiraikuroko123">GitHub</a></div>
     </header>
 
     <main id="main">
-      <section class="hero section-pad" id="top" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <h1 id="hero-title">Making the space between a VLA policy and a robot <em>measurable.</em></h1>
-          <p class="hero-lede">
-            I am Zhangwei Chen, an early-career researcher building reproducible runtime and evaluation systems for embodied intelligence.
-            My current work studies temporal alignment, guarded action execution, and evidence that survives the jump from a notebook to a robot simulator.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#work">Explore the work <span aria-hidden="true">↓</span></a>
-            <a class="button button-quiet" href="https://github.com/Shiraikuroko123/armbench-vla-runtime" target="_blank" rel="noreferrer">Open VLA-Sync ↗</a>
+      <section class="intro-section" id="about" aria-labelledby="intro-title">
+        <div class="intro-copy"><p class="eyebrow">ABOUT / 01</p><h1 id="intro-title">Researching systems<br><em>you can inspect.</em></h1><p class="intro-lede">I study the timing structure of large-model inference, the runtime of vision-language-action policies, and the boundary between simulation and deployable robotics.</p><p class="intro-body">I turn those questions into measurable delays, actions, trajectories, and logs, then publish the experiments so they can be opened, reproduced, and extended.</p><div class="intro-actions"><a class="button button-accent" href="assets/zhangwei-chen-cv.pdf">Download CV </a><a class="text-link" href="mailto:1911057162@qq.com">1911057162@qq.com </a></div></div>
+        <aside class="profile-card" aria-label="Profile"><div class="portrait"><img id="avatar-image" src="assets/avatar-placeholder.svg" alt="Avatar placeholder" width="320" height="320"></div><dl class="profile-facts"><div><dt>Based</dt><dd>Shenzhen · China</dd></div><div><dt>Education</dt><dd>Wuhan University / Electronic Information</dd></div><div><dt>Focus</dt><dd>LLM inference · VLA · computer vision</dd></div></dl></aside>
+      </section>
+
+      <section class="experience-section section-block" id="experience" aria-labelledby="experience-title"><div class="section-heading"><p class="eyebrow">EXPERIENCE / 02</p><h2 id="experience-title">Experience &amp; training</h2><p>From industrial cameras and asynchronous inference to robot motion control, I keep placing software systems against observable boundaries.</p></div><div class="experience-list"><article class="experience-item"><time datetime="2026-01">2026.01 — 04</time><div><span class="item-kicker">INTERNSHIP / SHENZHEN</span><h3>Software engineering intern</h3><p>Shenzhen Yaqi Technology Co., Ltd. Integrated YOLO segmentation and ONNX Runtime into an industrial-camera pipeline, implementing asynchronous capture and inference in C++ / Qt.</p></div></article><article class="experience-item"><time datetime="2026">2026</time><div><span class="item-kicker">CAPSTONE / SCARA</span><h3>Machine-vision measurement and multi-axis motion control</h3><p>Connected visual measurement with multi-axis trajectory control, using a dedicated communication thread for dispatch, retries, and state feedback.</p></div></article><article class="experience-item"><time datetime="2022-09">2022.09 — 2026.06</time><div><span class="item-kicker">WUHAN UNIVERSITY</span><h3>Electronic Information Engineering</h3><p>Wuhan University, School of Electronic Information. Provincial second prize in mathematical modeling, MCM Honorable Mention, and a provincial second prize in the integrated-circuit innovation competition. GPA 3.43/4.0 with an 85.37/100 average.</p></div></article></div></section>
+
+      <section class="awards-section section-block" id="awards" aria-labelledby="awards-title"><div class="section-heading"><p class="eyebrow">AWARDS / 03</p><h2 id="awards-title">Academic record</h2><p>Competitions and credentials from my undergraduate study.</p></div><div class="awards-list"><article><span class="award-mark">01</span><div><h3>First Prize</h3><p>National College Students Mathematics Competition</p></div></article><article><span class="award-mark">02</span><div><h3>Provincial Second Prize</h3><p>Mathematical Contest in Modeling</p></div></article><article><span class="award-mark">03</span><div><h3>Honorable Mention</h3><p>Mathematical Contest in Modeling / MCM-ICM</p></div></article><article><span class="award-mark">04</span><div><h3>Provincial Second Prize</h3><p>China College Students Integrated Circuit Innovation and Entrepreneurship Competition</p></div></article><article><span class="award-mark">05</span><div><h3>CET-6 passed</h3><p>College English Test Band 6</p></div></article><article><span class="award-mark">06</span><div><h3>Wuhan University</h3><p>B.Eng. Electronic Information Engineering · GPA 3.43/4.0 · Average 85.37/100</p></div></article></div></section>
+
+      <section class="focus-section section-block" aria-labelledby="focus-title"><div class="section-heading compact-heading"><p class="eyebrow">RESEARCH FOCUS / 04</p><h2 id="focus-title">Three questions I keep asking</h2></div><div class="focus-grid"><article><span>01</span><h3>Request scheduling</h3><p>How can decoding requests share GPU time without handing tail latency to guesswork?</p></article><article><span>02</span><h3>Runtime safeguards</h3><p>When a policy arrives late, where should a robot continue, and when should it stop?</p></article><article><span>03</span><h3>Vision deployment</h3><p>How should measurement, capture, and motion control cooperate through clear state boundaries?</p></article></div></section>
+
+      <section class="work-section section-block" id="work" aria-labelledby="work-title">
+        <div class="section-heading work-heading">
+          <p class="eyebrow">PROJECTS / 05</p>
+          <h2 id="work-title">Projects &amp; evidence</h2>
+          <p>Every project uses the same compact record so the work stays easy to scan, compare, and open.</p>
+        </div>
+
+        <div class="project-group" aria-labelledby="research-projects-title">
+          <div class="project-group-heading">
+            <div><span class="eyebrow">RESEARCH PROJECTS</span><h3 id="research-projects-title">Systems I am actively studying</h3></div>
+            <p>Inference scheduling, robot policy timing, and vision-based control.</p>
           </div>
-          <div class="hero-meta">
-            <span>武汉大学 · 电子信息学院卓工班</span>
-            <span>2022.09 — 2026.06</span>
-            <span>Shenzhen / China</span>
+          <div class="project-list">
+            <article class="project-row project-row-chart">
+              <a class="project-row-media" href="https://shiraikuroko123.github.io/immediate-refill/" aria-label="Open Immediate Refill interactive experiment"><img src="assets/showcase/immediate-refill.webp" width="2200" height="903" decoding="async" alt="Immediate Refill parallel inference scheduling timeline figure."><span class="media-tag">TRACE / A800</span></a>
+              <div class="project-row-body"><span class="item-kicker">GPU SCHEDULING / 2026.11</span><h3>Immediate Refill</h3><p>I measured when a free batch slot should be refilled, using A800 decoding traces and per-request logs.</p><div class="project-row-result"><strong>2.46%</strong><span>Median saving<br>256 / 128 / 128 tokens</span></div><div class="project-row-links"><a href="https://shiraikuroko123.github.io/immediate-refill/">Interactive experiment</a><a href="https://github.com/Shiraikuroko123/immediate-refill">Code</a></div></div>
+            </article>
+            <article class="project-row">
+              <div class="project-row-media"><video autoplay muted loop playsinline preload="metadata" poster="assets/showcase/panda-simulation.webp" aria-label="ArmBench MuJoCo Panda robot simulation"><source src="assets/showcase/armbench-teaser.mp4" type="video/mp4"></video><span class="media-tag">SIM / 120 EPISODES</span></div>
+              <div class="project-row-body"><span class="item-kicker">EMBODIED AI / 2026.01 — NOW</span><h3>ArmBench / VLA-Sync</h3><p>I convert observation-to-response delay into action steps, then choose where execution should begin for a robot arm.</p><div class="project-row-result"><strong>100 → 114</strong><span>LIBERO-Spatial successes<br>120 paired episodes</span></div><div class="project-row-links"><a href="https://shiraikuroko123.github.io/armbench-vla-runtime/">Simulation replay</a><a href="https://github.com/Shiraikuroko123/armbench-vla-runtime">Code &amp; data</a></div></div>
+            </article>
+            <article class="project-row">
+              <div class="project-row-media"><video id="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/showcase/rss-sawyer-rescue-poster.webp" aria-label="Nine-second 1080p Sawyer robot replay"><source src="assets/showcase/rss-sawyer-rescue-1080p.mp4" type="video/mp4"></video><span class="media-tag">LIVE DEMO / 1080P</span><button class="media-toggle" id="media-toggle" type="button" aria-pressed="false">Pause demo</button></div>
+              <div class="project-row-body"><span class="item-kicker">ROBOT CONTROL / SAWYER</span><h3>Cartesian Replay</h3><p>A compact replay for comparing end-effector trajectories under two control conditions.</p><div class="project-row-links"><a href="https://shiraikuroko123.github.io/rss-cartesian-target-replay/">Interactive replay</a><a href="https://github.com/Shiraikuroko123/rss-cartesian-target-replay">Code</a></div></div>
+            </article>
+            <article class="project-row">
+              <a class="project-row-media" href="https://shiraikuroko123.github.io/ral-controller-target-readback/" aria-label="Open Fetch controller target readback demo"><video autoplay muted loop playsinline preload="metadata" poster="assets/showcase/ral-fetch-pick-place-drop-poster.webp" aria-label="1080p Fetch robot pick-and-place demo"><source src="assets/showcase/ral-fetch-pick-place-drop-1080p.mp4" type="video/mp4"></video><span class="media-tag">FETCH / 1080P</span></a>
+              <div class="project-row-body"><span class="item-kicker">ROBOT CONTROL / FETCH</span><h3>Controller Target Readback</h3><p>Visualizing target readback and pick-and-place behavior through a short, inspectable robot demo.</p><div class="project-row-links"><a href="https://shiraikuroko123.github.io/ral-controller-target-readback/">Demo</a><a href="https://github.com/Shiraikuroko123/ral-controller-target-readback">Code</a></div></div>
+            </article>
           </div>
         </div>
 
-        <div class="hero-proof">
-          <div class="proof-frame">
-            <img src="assets/armbench-teaser-poster.webp" alt="Two views of a simulated Panda arm handling a tabletop task." />
-            <div class="proof-overlay">
-              <span class="proof-tag">REAL PROJECT EVIDENCE</span>
-              <span class="proof-label">VLA-Sync / MuJoCo Panda</span>
-            </div>
+        <div class="project-group project-group-more" aria-labelledby="more-projects-title">
+          <div class="project-group-heading">
+            <div><span class="eyebrow">MORE PROJECTS</span><h3 id="more-projects-title">Personal builds and interests</h3></div>
+            <p>Public GitHub projects outside the main robotics research line.</p>
           </div>
-          <div class="proof-caption">
-            <span>01 / Runtime evidence</span>
-            <span>Simulation · 7-DoF</span>
-          </div>
-          <div class="hero-rail" aria-label="Current research signals">
-            <span><strong>01</strong> action-chunk timing</span>
-            <span><strong>02</strong> fail-closed execution</span>
-            <span><strong>03</strong> reproducible artifacts</span>
+          <div class="project-list">
+            <article class="project-row">
+              <a class="project-row-media" href="https://shiraikuroko123.github.io/ai-trade/"><img src="assets/showcase/ai-trade-workstation.webp" width="1440" height="1000" decoding="async" alt="AI Trade research and simulated trading workstation."><span class="media-tag">RESEARCH / BACKTESTING</span></a>
+              <div class="project-row-body"><span class="item-kicker">PERSONAL PROJECT / PYTHON</span><h3>AI Trade</h3><p>A research-only simulated trading and backtesting workstation built around reproducible evidence and analysis.</p><div class="project-row-links"><a href="https://shiraikuroko123.github.io/ai-trade/">Project page</a><a href="https://github.com/Shiraikuroko123/ai-trade">Code</a></div></div>
+            </article>
+            <article class="project-row">
+              <a class="project-row-media" href="https://shiraikuroko123.github.io/paperfield/"><img src="assets/showcase/paperfield-workspace.webp" width="1440" height="960" decoding="async" alt="Paperfield research tooling desktop workspace."><span class="media-tag">DESKTOP / TOOLING</span></a>
+              <div class="project-row-body"><span class="item-kicker">PERSONAL PROJECT / DESKTOP</span><h3>Paperfield</h3><p>A focused workspace for organizing papers, notes, and research threads while reading and building.</p><div class="project-row-links"><a href="https://shiraikuroko123.github.io/paperfield/">Interface</a><a href="https://github.com/Shiraikuroko123/paperfield">Code</a></div></div>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="signal-strip" aria-label="Research snapshot">
-        <div class="signal-item">
-          <strong>7-DoF</strong>
-          <span>Panda runtime base</span>
-        </div>
-        <div class="signal-item">
-          <strong>38 / 40</strong>
-          <span>LIBERO Spatial pilot successes</span>
-        </div>
-        <div class="signal-item">
-          <strong>114 / 120</strong>
-          <span>age-aligned held-out selections</span>
-        </div>
-        <div class="signal-item">
-          <strong>v0.3.2</strong>
-          <span>current VLA-Sync release</span>
-        </div>
-      </section>
-
-      <section class="section-pad work-section" id="work" aria-labelledby="work-title">
-        <div class="section-intro">
-          <p class="eyebrow">Selected work</p>
-          <h2 id="work-title">Projects built to be opened, inspected, and rerun.</h2>
-          <p>
-            The strongest artifacts live in public repositories. Each one has a different job, from runtime evidence to research tooling and auditable quantitative workflows.
-          </p>
-        </div>
-
-        <div class="work-controls" role="group" aria-label="Filter projects">
-          <button class="filter-button is-active" type="button" data-filter="all">All work</button>
-          <button class="filter-button" type="button" data-filter="research">Research systems</button>
-          <button class="filter-button" type="button" data-filter="tools">Tools &amp; analysis</button>
-        </div>
-
-        <div class="work-list">
-          <article class="work-item" data-category="research">
-            <div class="work-index">01</div>
-            <div class="work-body">
-              <div class="work-heading">
-                <h3>VLA-Sync / armbench-vla-runtime</h3>
-                <span class="work-status">active / open source</span>
-              </div>
-              <p>
-                A runtime and evaluation platform for action-chunk VLA policies. It measures observation age, selects an unexpired action suffix, validates responses, and preserves the hold or fallback path when a response misses its deadline.
-              </p>
-              <div class="work-tags"><span>MuJoCo</span><span>LIBERO</span><span>pi0.5</span><span>CPU validation</span></div>
-            </div>
-            <a class="work-link" href="https://github.com/Shiraikuroko123/armbench-vla-runtime" target="_blank" rel="noreferrer" aria-label="Open VLA-Sync repository">Open repo ↗</a>
-          </article>
-
-          <article class="work-item" data-category="tools">
-            <div class="work-index">02</div>
-            <div class="work-body">
-              <div class="work-heading">
-                <h3>Paperfield</h3>
-                <span class="work-status">research workstation</span>
-              </div>
-              <p>
-                A desktop research workstation for tracking and explaining embodied intelligence and large language model papers, GitHub projects, and the connections between them.
-              </p>
-              <div class="work-tags"><span>literature</span><span>LLM</span><span>embodied AI</span></div>
-            </div>
-            <a class="work-link" href="https://shiraikuroko123.github.io/paperfield/" target="_blank" rel="noreferrer" aria-label="Open Paperfield project page">Open site ↗</a>
-          </article>
-
-          <article class="work-item" data-category="tools">
-            <div class="work-index">03</div>
-            <div class="work-body">
-              <div class="work-heading">
-                <h3>AI Trade</h3>
-                <span class="work-status">quantitative systems</span>
-              </div>
-              <p>
-                An auditable ETF rotation, backtesting, and forward paper-trading system. This is an adjacent project that reflects the same preference for traceable inputs, explicit protocols, and reproducible decisions.
-              </p>
-              <div class="work-tags"><span>Python</span><span>backtesting</span><span>risk</span></div>
-            </div>
-            <a class="work-link" href="https://shiraikuroko123.github.io/ai-trade/" target="_blank" rel="noreferrer" aria-label="Open AI Trade project page">Open site ↗</a>
-          </article>
-        </div>
-      </section>
-
-      <section class="focus-section" id="focus" aria-labelledby="focus-title">
-        <div class="focus-image">
-          <img src="assets/method-landscape.webp" alt="A landscape comparison of runtime evidence, adaptation methods, and their evaluation domains." loading="lazy" />
-          <span class="image-note">VLA-Sync / method landscape</span>
-        </div>
-        <div class="focus-copy">
-          <p class="eyebrow">Research focus</p>
-          <h2 id="focus-title">Reliability is part of the model story.</h2>
-          <p>
-            A VLA policy can produce plausible actions while a runtime still executes the wrong time slice, accepts a malformed response, or hides the cost of a missed deadline. My work makes those boundaries visible.
-          </p>
-          <ul class="focus-list">
-            <li><span>01</span><strong>Temporal alignment</strong><small>Measure observation age and choose the action suffix that is still live.</small></li>
-            <li><span>02</span><strong>Guarded execution</strong><small>Validate, hold, brake, and fail closed when a policy response is not safe to publish.</small></li>
-            <li><span>03</span><strong>Evidence discipline</strong><small>Keep simulation pilots, offline replays, and hardware claims separate and inspectable.</small></li>
-          </ul>
-          <a class="text-link" href="https://shiraikuroko123.github.io/armbench-vla-runtime/" target="_blank" rel="noreferrer">Read the project evidence ↗</a>
-        </div>
-      </section>
-
-      <section class="about-section section-pad" id="about" aria-labelledby="about-title">
-        <div class="about-heading">
-          <p class="eyebrow">About</p>
-          <h2 id="about-title">A systems-minded researcher at the start of the field.</h2>
-        </div>
-        <div class="about-copy">
-          <p>
-            I studied electronic information engineering at Wuhan University, where I worked across computer vision, quantitative remote sensing, and robot-policy runtime systems. I care about the details that make a result reproducible: clocks, artifacts, failure modes, and the sentence that says exactly what a number does not prove.
-          </p>
-          <div class="about-grid">
-            <div>
-              <span class="label">Toolkit</span>
-              <p>Python · PyTorch · NumPy / Pandas · Linux · Git · MuJoCo · CI / testing</p>
-            </div>
-            <div>
-              <span class="label">Recognition</span>
-              <p>数学竞赛省一 · 数学建模省二 · MCM Honorable Mention · 集成电路创新大赛省二</p>
-            </div>
-            <div>
-              <span class="label">Current direction</span>
-              <p>Robot simulation · embodied intelligence · computer vision · reliable evaluation</p>
-            </div>
-            <div>
-              <span class="label">Availability</span>
-              <p>Open to research assistant and robotics / simulation opportunities from early 2027.</p>
-            </div>
-          </div>
-          <div class="contact-row">
-            <a class="button button-primary" href="mailto:1911057162@qq.com">Email me ↗</a>
-            <button class="button button-quiet copy-button" type="button" data-copy="1911057162@qq.com">Copy email</button>
-            <a class="text-link" href="https://github.com/Shiraikuroko123" target="_blank" rel="noreferrer">GitHub profile ↗</a>
-          </div>
-          <p class="copy-status" role="status" aria-live="polite"></p>
-        </div>
-      </section>
-
-      <section class="citation-section" aria-labelledby="citation-title">
-        <div>
-          <p class="eyebrow">Cite the work</p>
-          <h2 id="citation-title">VLA-Sync is an engineering artifact before it is a claim.</h2>
-        </div>
-        <div class="citation-block">
-          <code>@software{chen2026vlasync,<br />  author = {Chen, Zhangwei},<br />  title = {VLA-Sync: Runtime and evaluation for action-chunk VLA policies},<br />  version = {0.3.2}<br />}</code>
-          <button class="copy-button inverse" type="button" data-copy="@software{chen2026vlasync, author = {Chen, Zhangwei}, title = {VLA-Sync: Runtime and evaluation for action-chunk VLA policies}, version = {0.3.2}}">Copy citation</button>
-        </div>
-        <p class="copy-status inverse-status" role="status" aria-live="polite"></p>
-      </section>
+      <section class="contact-section section-block" id="contact" aria-labelledby="contact-title"><div class="contact-copy"><p class="eyebrow">CONTACT / 06</p><h2 id="contact-title">Make systems<br><em>easier to inspect.</em></h2></div><div class="contact-links"><a href="mailto:1911057162@qq.com">1911057162@qq.com</a><a href="assets/zhangwei-chen-cv.pdf">CV PDF</a><a href="https://github.com/Shiraikuroko123">GitHub</a></div></section>
     </main>
-
-    <footer class="site-footer">
-      <span>© 2026 Zhangwei Chen</span>
-      <span>Built for clear evidence and open work.</span>
-      <a href="#top">Back to top ↑</a>
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
+    <footer class="site-footer"><span>© 2026 Zhangwei Chen</span><span>Static GitHub Pages · public evidence</span><a href="#top">Back to top</a></footer>
+  </div>
+</body>
 </html>

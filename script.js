@@ -1,41 +1,56 @@
-const menuToggle = document.querySelector(".menu-toggle");
-const siteNav = document.querySelector(".site-nav");
-
-menuToggle?.addEventListener("click", () => {
-  const isOpen = siteNav.classList.toggle("is-open");
-  menuToggle.setAttribute("aria-expanded", String(isOpen));
-});
-
-siteNav?.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => {
-    siteNav.classList.remove("is-open");
-    menuToggle?.setAttribute("aria-expanded", "false");
+document.body.classList.add("js-ready");
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+if (prefersReducedMotion) {
+  document.querySelectorAll("video[autoplay]").forEach((video) => {
+    video.pause();
+    video.removeAttribute("autoplay");
   });
-});
+}
+const heroVideo = document.querySelector("#hero-video");
+const mediaToggle = document.querySelector("#media-toggle");
+const isEnglish = document.documentElement.lang.toLowerCase().startsWith("en");
+const mediaLabels = isEnglish
+  ? { pause: "Pause demo", play: "Play demo" }
+  : { pause: "暂停演示", play: "播放演示" };
 
-const filterButtons = document.querySelectorAll(".filter-button");
-const workItems = document.querySelectorAll(".work-item");
+if (heroVideo && mediaToggle) {
+  const syncMediaToggle = () => {
+    const isPaused = heroVideo.paused;
+    mediaToggle.textContent = isPaused ? mediaLabels.play : mediaLabels.pause;
+    mediaToggle.setAttribute("aria-pressed", String(isPaused));
+  };
 
-filterButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const filter = button.dataset.filter;
-    filterButtons.forEach((item) => item.classList.toggle("is-active", item === button));
-    workItems.forEach((item) => {
-      const visible = filter === "all" || item.dataset.category === filter;
-      item.classList.toggle("is-hidden", !visible);
-    });
+  mediaToggle.addEventListener("click", () => {
+    if (heroVideo.paused) heroVideo.play().catch(() => {});
+    else heroVideo.pause();
   });
-});
+  heroVideo.addEventListener("play", syncMediaToggle);
+  heroVideo.addEventListener("pause", syncMediaToggle);
+  syncMediaToggle();
+}
 
-document.querySelectorAll(".copy-button").forEach((button) => {
-  button.addEventListener("click", async () => {
-    const text = button.dataset.copy;
-    const status = button.closest(".about-copy, .citation-section")?.querySelector(".copy-status, .inverse-status");
-    try {
-      await navigator.clipboard.writeText(text);
-      if (status) status.textContent = "Copied to clipboard.";
-    } catch {
-      if (status) status.textContent = "Copy unavailable here — select the text manually.";
-    }
+const avatarInput = document.querySelector("#avatar-input");
+const avatarImage = document.querySelector("#avatar-image");
+let avatarObjectUrl = "";
+
+if (avatarInput && avatarImage) {
+  avatarInput.addEventListener("change", () => {
+    const [file] = avatarInput.files || [];
+    if (!file || !file.type.startsWith("image/")) return;
+    if (avatarObjectUrl) URL.revokeObjectURL(avatarObjectUrl);
+    avatarObjectUrl = URL.createObjectURL(file);
+    avatarImage.src = avatarObjectUrl;
   });
-});
+  window.addEventListener("beforeunload", () => {
+    if (avatarObjectUrl) URL.revokeObjectURL(avatarObjectUrl);
+  });
+}
+
+const navLinks = [...document.querySelectorAll(".site-nav a")];
+const sections = navLinks.map((link) => document.querySelector(link.getAttribute("href"))).filter(Boolean);
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => { if (!entry.isIntersecting) return; navLinks.forEach((link) => link.classList.toggle("is-active", link.getAttribute("href") === `#${entry.target.id}`)); });
+}, { rootMargin: "-38% 0px -54%" });
+sections.forEach((section) => sectionObserver.observe(section));
+const revealObserver = new IntersectionObserver((entries) => entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add("is-visible"); revealObserver.unobserve(entry.target); } }), { threshold: 0.12 });
+document.querySelectorAll("[data-reveal]").forEach((element) => revealObserver.observe(element));

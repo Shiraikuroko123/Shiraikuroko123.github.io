@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-labelledby="title desc">
+  <title id="title">Avatar upload placeholder</title>
+  <desc id="desc">A dark placeholder with the initials ZC and an upload prompt.</desc>
+  <rect width="640" height="640" fill="#171e27"/>
+  <path d="M0 520 220 300l130 130 90-90L640 540v100H0Z" fill="#222c38"/>
+  <circle cx="492" cy="145" r="72" fill="#d8ff5f" opacity=".9"/>
+  <text x="48" y="116" fill="#9ca8b4" font-family="monospace" font-size="24" letter-spacing="4">AVATAR / SLOT</text>
+  <text x="48" y="490" fill="#f0f3f5" font-family="Arial, sans-serif" font-size="148" font-weight="700" letter-spacing="-8">ZC</text>
+  <text x="52" y="566" fill="#9ca8b4" font-family="monospace" font-size="22" letter-spacing="2">REPLACE WITH YOUR PORTRAIT</text>
+</svg>
